@@ -1,0 +1,7 @@
+{
+  "name": "coordinator-harena-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
