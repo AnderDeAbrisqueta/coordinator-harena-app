@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'adulto-mayor-page',
+    loadChildren: () => import('./pages/adulto-mayor-page/adulto-mayor-page.module').then( m => m.AdultoMayorPagePageModule)
+  },
+  {
+    path: 'adultos-mayores-page',
+    loadChildren: () => import('./pages/adultos-mayores-page/adultos-mayores-page.module').then( m => m.AdultosMayoresPagePageModule)
+  },
+  {
+    path: 'voluntario-page',
+    loadChildren: () => import('./pages/voluntario-page/voluntario-page.module').then( m => m.VoluntarioPagePageModule)
+  },
+  {
+    path: 'voluntarios-page',
+    loadChildren: () => import('./pages/voluntarios-page/voluntarios-page.module').then( m => m.VoluntariosPagePageModule)
+  },
+  {
+    path: 'formulario-page',
+    loadChildren: () => import('./pages/formulario-page/formulario-page.module').then( m => m.FormularioPagePageModule)
+  },
 ];
 
 @NgModule({

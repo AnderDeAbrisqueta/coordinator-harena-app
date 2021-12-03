@@ -1,0 +1,19 @@
+<!--Menu component-->
+<app-menu></app-menu>
+
+<!--Header-->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Adultos Mayores</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--Body-->
+<ion-content *ngFor="let item of getAdultos()">
+  {{ item | json }}
+</ion-content>
+</div>

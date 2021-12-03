@@ -1,20 +1,73 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--Menu component-->
+<app-menu></app-menu>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<!--Header-->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <!--Logo-->
+  <ion-content class="ion-padding">
+    <div>
+      <img src="../../assets/img/logoHarena.png" />
+    </div>
+
+    <!--Buttons-->
+    <div>
+      <ion-button
+        href="/adultos-mayores-page"
+        expand="block"
+        shape="round"
+        color="warning"
+      >
+        <ion-icon
+          id="icon-button"
+          name="accessibility-outline"
+          slot="start"
+          color="light"
+        ></ion-icon>
+        <ion-label>Adulto Mayor</ion-label>
+      </ion-button>
+    </div>
+
+    <div>
+      <ion-button
+        href="/voluntarios-page"
+        expand="block"
+        shape="round"
+        color="warning"
+      >
+        <ion-icon
+          id="icon-button"
+          name="person-outline"
+          slot="start"
+          color="light"
+        ></ion-icon>
+        <ion-label>Voluntario</ion-label>
+      </ion-button>
+    </div>
+
+    <div>
+      <ion-button
+        href="/formulario-page"
+        expand="block"
+        shape="round"
+        color="warning"
+      >
+        <ion-icon
+          id="icon-button"
+          name="clipboard-outline"
+          slot="start"
+          color="light"
+        ></ion-icon>
+        <ion-label>Formulario</ion-label>
+      </ion-button>
+    </div>
+  </ion-content>
+</div>
