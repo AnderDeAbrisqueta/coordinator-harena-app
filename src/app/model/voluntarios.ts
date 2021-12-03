@@ -1,11 +1,10 @@
 export class Voluntarios {
   id: number;
-  avatar: string;
+  avatar?: string;
   first_name: string;
   last_name: string;
-  birthday: Date;
   gender: string;
-  phone: number;
+  phone: string;
   street_address: string;
   description: string;
 }

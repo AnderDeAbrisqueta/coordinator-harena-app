@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar color="warning">
     <ion-buttons slot="start">
@@ -8,4 +7,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content> 
+  <ion-avatar>
+    <img [src]="adultoMayor.avatar">
+  </ion-avatar>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ adultoMayor.street_address }}</ion-card-subtitle>
+      <ion-card-title>{{ adultoMayor.first_name }} {{ adultoMayor.last_name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ adultoMayor.description }}
+      <div>
+        <br>
+        <ion-icon slot="start" name="call"></ion-icon> {{ adultoMayor.phone }}
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

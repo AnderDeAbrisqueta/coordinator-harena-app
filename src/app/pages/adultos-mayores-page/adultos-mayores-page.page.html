@@ -15,10 +15,10 @@
   <!--Body-->
   <ion-content>
     <ion-searchbar inputmode="search"></ion-searchbar>
-    <ion-list>
-      <ion-item *ngFor="let user of adultosMayores">
+    <ion-list >
+      <ion-item *ngFor="let user of adultosMayores" (click)="goAdultoPage(user.id)">
         <ion-avatar slot="start">
-          <img [src]="user.avatar" />
+          <img [src]="user.avatar"/>
         </ion-avatar>
         <ion-label>
           {{ user.last_name }} {{ user.first_name }}
