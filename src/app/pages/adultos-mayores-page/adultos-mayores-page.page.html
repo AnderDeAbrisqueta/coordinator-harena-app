@@ -13,7 +13,19 @@
   </ion-header>
 
   <!--Body-->
-<ion-content *ngFor="let item of getAdultos()">
-  {{ item | json }}
-</ion-content>
+  <ion-content>
+    <ion-searchbar inputmode="search"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let user of adultosMayores">
+        <ion-avatar slot="start">
+          <img [src]="user.avatar" />
+        </ion-avatar>
+        <ion-label>
+          {{ user.last_name }} {{ user.first_name }}
+          <h3>{{ user.phone }}</h3>
+          <p>{{user.street_address}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </div>
