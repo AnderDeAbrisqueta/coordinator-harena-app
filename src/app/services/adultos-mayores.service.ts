@@ -6,9 +6,9 @@ import { AdultosMayores } from '../model/adultos-mayores';
 })
 export class AdultosMayoresService {
   adultosMayores: AdultosMayores[] = [];
+  adultoMayorCounter: number = 11;
 
   constructor() {
-
     //Variable that collects the data
     this.adultosMayores = [
       {
@@ -144,5 +144,21 @@ export class AdultosMayoresService {
     const adultoMayor = this.adultosMayores.filter((t) => t.id === id)[0];
     const newOldPerson = Object.assign({}, adultoMayor);
     return newOldPerson;
+  }
+
+  saveAdultoMayor(adulto: AdultosMayores) {
+    if (adulto.id == undefined) {
+      adulto.id = this.adultoMayorCounter++;
+      this.adultosMayores.push(adulto);
+    } else {
+      this.deleteAdultoMayor(adulto.id);
+      this.adultosMayores.push(adulto);
+    }
+  }
+
+  public deleteAdultoMayor(id: number) {
+    this.adultosMayores = this.adultosMayores.filter(
+      (adulto) => adulto.id != id
+    );
   }
 }

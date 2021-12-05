@@ -9,22 +9,31 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Adultos Mayores</ion-title>
+      <ion-buttons slot="end" padding>
+        <ion-button (click)="goEditAdultoPage(undefined)">
+          <ion-icon slot="icon-only" name="person-add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
   <!--Body-->
   <ion-content>
     <ion-searchbar inputmode="search"></ion-searchbar>
-    <ion-list >
-      <ion-item *ngFor="let user of adultosMayores" (click)="goAdultoPage(user.id)">
+    <ion-list>
+      <ion-item
+        *ngFor="let user of adultosMayoresService.getAdultosMayores()">
         <ion-avatar slot="start">
-          <img [src]="user.avatar"/>
+          <img [src]="user.avatar" (click)="goAdultoPage(user.id)"/>
         </ion-avatar>
-        <ion-label>
+        <ion-label (click)="goAdultoPage(user.id)">
           {{ user.last_name }} {{ user.first_name }}
           <h3>{{ user.phone }}</h3>
           <p>{{user.street_address}}</p>
         </ion-label>
+        <ion-icon name="pencil-outline" color="warning" size="small" (click)="goEditAdultoPage(user.id)"></ion-icon>
+        &nbsp;
+        <ion-icon name="trash-outline" color="warning" size="small" (click)=" presentAlertConfirm(user)"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-content>

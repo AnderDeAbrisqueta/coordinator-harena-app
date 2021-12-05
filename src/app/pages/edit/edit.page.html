@@ -1,0 +1,48 @@
+<!--Menu component-->
+<app-menu></app-menu>
+
+<!--Header-->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="adultos-mayores-page"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Nuevo adulto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--Body-->
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label position="floating" color="warning">Imagen</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.avatar"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Nombre</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.first_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Apellido</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.last_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Género</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.gender"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Teléfono</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Dirección</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.street_address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="warning">Descripción</ion-label>
+      <ion-input clearInput [(ngModel)]="adultoMayor.description"></ion-input>
+    </ion-item>
+    <br />
+    <ion-button expand="full" color="warning" (click)="saveAdultoMayor()"> Guardar </ion-button>
+  </ion-content>
+</div>

@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'formulario-page',
     loadChildren: () => import('./pages/formulario-page/formulario-page.module').then( m => m.FormularioPagePageModule)
   },
+  {
+    path: 'edit',
+    loadChildren: () => import('./pages/edit/edit.module').then( m => m.EditPageModule)
+  },
+  {
+    path: 'edit/:id',
+    loadChildren: () => import('./pages/edit/edit.module').then( m => m.EditPageModule)
+  },
 ];
 
 @NgModule({
