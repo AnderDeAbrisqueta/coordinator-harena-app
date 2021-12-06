@@ -10,13 +10,15 @@ import { VoluntariosPagePage } from './voluntarios-page.page';
 
 //Import Menu component
 import { MenuComponent } from 'src/app/components/menu/menu.component';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VoluntariosPagePageRoutingModule
+    VoluntariosPagePageRoutingModule, 
+    PipesModule
   ],
   declarations: [VoluntariosPagePage, MenuComponent]
 })

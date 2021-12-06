@@ -146,7 +146,7 @@ export class AdultosMayoresService {
     return newOldPerson;
   }
 
-  saveAdultoMayor(adulto: AdultosMayores) {
+  saveAdultoMayor(adulto: AdultosMayores): void {
     if (adulto.id == undefined) {
       adulto.id = this.adultoMayorCounter++;
       this.adultosMayores.push(adulto);

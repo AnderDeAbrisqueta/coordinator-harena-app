@@ -20,7 +20,11 @@ export class EditPage implements OnInit {
     description: '',
   };
 
-  constructor(private adultosMayoresService: AdultosMayoresService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private adultosMayoresService: AdultosMayoresService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -33,5 +37,4 @@ export class EditPage implements OnInit {
     this.adultosMayoresService.saveAdultoMayor(this.adultoMayor);
     this.router.navigateByUrl('/adultos-mayores-page');
   }
-
 }

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VoluntarioPagePageRoutingModule } from './voluntario-page-routing.module';
+import { EditVolunteerPageRoutingModule } from './edit-volunteer-routing.module';
 
-import { VoluntarioPagePage } from './voluntario-page.page';
+import { EditVolunteerPage } from './edit-volunteer.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VoluntarioPagePageRoutingModule,
+    EditVolunteerPageRoutingModule
   ],
-  declarations: [VoluntarioPagePage]
+  declarations: [EditVolunteerPage]
 })
-export class VoluntarioPagePageModule {}
+export class EditVolunteerPageModule {}

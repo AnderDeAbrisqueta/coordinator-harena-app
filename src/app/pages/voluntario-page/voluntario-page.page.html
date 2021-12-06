@@ -9,19 +9,21 @@
 
 <ion-content>
   <ion-avatar>
-    <img [src]="voluntario.avatar">
+    <img [src]="voluntario.avatar" />
   </ion-avatar>
 
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>{{ voluntario.street_address }}</ion-card-subtitle>
-      <ion-card-title>{{ voluntario.first_name }} {{ voluntario.last_name }}</ion-card-title>
+      <ion-card-title
+        >{{ voluntario.first_name }} {{ voluntario.last_name }}</ion-card-title
+      >
     </ion-card-header>
 
     <ion-card-content>
       {{ voluntario.description }}
       <div>
-        <br>
+        <br />
         <ion-icon slot="start" name="call"></ion-icon> {{ voluntario.phone }}
       </div>
     </ion-card-content>

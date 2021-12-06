@@ -10,6 +10,9 @@ import { AdultosMayoresService } from 'src/app/services/adultos-mayores.service'
   styleUrls: ['./adultos-mayores-page.page.scss'],
 })
 export class AdultosMayoresPagePage implements OnInit {
+
+  buscarTexto = '';
+
   constructor(
     private adultosMayoresService: AdultosMayoresService,
     private router: Router,
@@ -54,5 +57,11 @@ export class AdultosMayoresPagePage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  buscarAdultoMayor(event) {
+    const texto = event.target.value;
+    this.buscarTexto = texto;
+    
   }
 }
