@@ -8,7 +8,7 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Adultos Mayores</ion-title>
+      <ion-title>Personas Mayores</ion-title>
       <ion-buttons slot="end" padding>
         <ion-button (click)="goEditAdultoPage(undefined)">
           <ion-icon slot="icon-only" name="person-add-outline"></ion-icon>
@@ -32,13 +32,13 @@
       <ion-item *ngFor="let user of adultosMayoresService.getAdultosMayores() | filtro:buscarTexto">
         <ion-avatar slot="start">
           <img
-            *ngIf="user.avatar != null"
+            *ngIf="user.avatar != ''"
             [src]="user.avatar"
             (click)="goAdultoPage(user.id)"
           />
           <img
-            *ngIf="user.avatar == null"
-            src="../../../assets/img/person-outline.svg"
+            *ngIf="user.avatar == ''"
+            src="./assets/img/person-outline.svg"
           />
         </ion-avatar>
         <ion-label (click)="goAdultoPage(user.id)">

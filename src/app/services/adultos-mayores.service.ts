@@ -147,9 +147,12 @@ export class AdultosMayoresService {
   }
 
   saveAdultoMayor(adulto: AdultosMayores): void {
+    console.log(adulto)
     if (adulto.id == undefined) {
       adulto.id = this.adultoMayorCounter++;
+      console.log(this.adultosMayores);
       this.adultosMayores.push(adulto);
+      console.log(this.adultosMayores);
     } else {
       this.deleteAdultoMayor(adulto.id);
       this.adultosMayores.push(adulto);

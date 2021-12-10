@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { EditVolunteerPageRoutingModule } from './edit-volunteer-routing.module';
 
 import { EditVolunteerPage } from './edit-volunteer.page';
+import { MenuComponent } from 'src/app/components/menu/menu.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { EditVolunteerPage } from './edit-volunteer.page';
     IonicModule,
     EditVolunteerPageRoutingModule
   ],
-  declarations: [EditVolunteerPage]
+  declarations: [EditVolunteerPage, MenuComponent]
 })
 export class EditVolunteerPageModule {}

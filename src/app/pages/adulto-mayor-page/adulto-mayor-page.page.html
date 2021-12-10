@@ -9,7 +9,8 @@
 
 <ion-content> 
   <ion-avatar>
-    <img [src]="adultoMayor.avatar"/>
+    <img *ngIf="adultoMayor.avatar != ''" [src]="adultoMayor.avatar"/>
+    <img *ngIf="adultoMayor.avatar == ''" src="./assets/img/person-outline.svg"/>
   </ion-avatar>
   <ion-card>
     <ion-card-header>

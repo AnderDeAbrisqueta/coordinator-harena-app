@@ -10,7 +10,6 @@ import { AdultosMayoresService } from 'src/app/services/adultos-mayores.service'
 })
 export class EditPage implements OnInit {
   adultoMayor: AdultosMayores = {
-    id: 0,
     avatar: '',
     first_name: '',
     last_name: '',
@@ -35,6 +34,7 @@ export class EditPage implements OnInit {
 
   saveAdultoMayor() {
     this.adultosMayoresService.saveAdultoMayor(this.adultoMayor);
+    console.log("saveVoluntario")
     this.router.navigateByUrl('/adultos-mayores-page');
   }
 }

@@ -10,7 +10,6 @@ import { VoluntariosService } from 'src/app/services/voluntarios.service';
 })
 export class EditVolunteerPage implements OnInit {
   voluntario: Voluntarios = {
-    id: 0,
     avatar: '',
     first_name: '',
     last_name: '',
@@ -37,6 +36,7 @@ export class EditVolunteerPage implements OnInit {
 
   saveVoluntario() {
     this.voluntariosService.saveVoluntario(this.voluntario);
+    console.log("saveVoluntario")
     this.router.navigateByUrl('/voluntarios-page');
   }
 }

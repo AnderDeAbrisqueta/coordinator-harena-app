@@ -29,10 +29,18 @@
   <ion-content>
     <ion-list>
       <ion-item
-        *ngFor="let user of voluntarios | filtro:buscarTexto"
+        *ngFor="let user of voluntariosService.voluntarios | filtro:buscarTexto"
       >
         <ion-avatar slot="start">
-          <img [src]="user.avatar" (click)="goVoluntarioPage(user.id)" />
+          <img
+            *ngIf="user.avatar != ''"
+            [src]="user.avatar"
+            (click)="goVoluntarioPage(user.id)"
+          />
+          <img
+            *ngIf="user.avatar == ''"
+            src="./assets/img/person-outline.svg"
+          />
         </ion-avatar>
         <ion-label (click)="goVoluntarioPage(user.id)">
           {{ user.last_name }} {{ user.first_name }}

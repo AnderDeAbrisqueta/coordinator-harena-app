@@ -10,7 +10,6 @@ import { VoluntariosService } from '../../services/voluntarios.service';
 })
 export class VoluntarioPagePage implements OnInit {
   voluntario: Voluntarios = {
-    id: 0,
     avatar: '',
     first_name: '',
     last_name: '',

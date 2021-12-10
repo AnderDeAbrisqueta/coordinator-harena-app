@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AdultoMayorPagePageRoutingModule } from './adulto-mayor-page-routing.module';
 
 import { AdultoMayorPagePage } from './adulto-mayor-page.page';
+import { MenuComponent } from 'src/app/components/menu/menu.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { AdultoMayorPagePage } from './adulto-mayor-page.page';
     IonicModule,
     AdultoMayorPagePageRoutingModule
   ],
-  declarations: [AdultoMayorPagePage]
+  declarations: [AdultoMayorPagePage, MenuComponent]
 })
 export class AdultoMayorPagePageModule {}

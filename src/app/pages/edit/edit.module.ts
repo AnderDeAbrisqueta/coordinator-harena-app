@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { EditPageRoutingModule } from './edit-routing.module';
 
 import { EditPage } from './edit.page';
+import { MenuComponent } from 'src/app/components/menu/menu.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { EditPage } from './edit.page';
     IonicModule,
     EditPageRoutingModule
   ],
-  declarations: [EditPage]
+  declarations: [EditPage, MenuComponent]
 })
 export class EditPageModule {}
