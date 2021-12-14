@@ -29,7 +29,7 @@
   <ion-content>
     <ion-list>
       <ion-item
-        *ngFor="let user of voluntariosService.voluntarios | filtro:buscarTexto"
+        *ngFor="let user of voluntariosService.getVoluntarios() | async | filtro:buscarTexto"
       >
         <ion-avatar slot="start">
           <img

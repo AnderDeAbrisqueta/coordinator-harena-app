@@ -10,7 +10,7 @@ import { VoluntariosService } from '../../services/voluntarios.service';
   styleUrls: ['./voluntarios-page.page.scss'],
 })
 export class VoluntariosPagePage implements OnInit {
-  voluntarios: Voluntarios[] = [];
+  // voluntarios: Voluntarios[] = [];
   buscarTexto = '';
 
   constructor(
@@ -20,14 +20,14 @@ export class VoluntariosPagePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getVolunteers();
+    // this.getVolunteers();
   }
 
-  getVolunteers() {
-    this.voluntariosService
-      .getVoluntarios()
-      .subscribe((datos) => (this.voluntarios = datos));
-  }
+  // getVolunteers() {
+  //   this.voluntariosService
+  //     .getVoluntarios()
+  //     .subscribe((datos) => (this.voluntarios = datos));
+  // }
 
   goVoluntarioPage(id?: number) {
     this.router.navigateByUrl(
